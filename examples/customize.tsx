@@ -2,8 +2,8 @@
 
 import 'rc-texty-anim/assets/index.less';
 import TextyAnim from '../src/';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import '../assets/index.less';
 import './assets/index.less';
 
@@ -45,8 +45,20 @@ class Demo extends React.Component {
         };
       case 5:
         return {
-          scale: 0,
-          opacity: 0,
+          enter: [
+            {
+              scale: 2,
+              opacity: 0,
+              type: 'set',
+            },
+            { scale: 1.2, opacity: 1, duration: 300 },
+            { scale: 0.9, duration: 200 },
+            { scale: 1.05, duration: 150 },
+            { scale: 1, duration: 100 },
+          ],
+          leave: {
+            opacity: 0, scale: 0,
+          },
         };
       case 11:
       case 6:

@@ -6,18 +6,13 @@ React TextyAnim Component
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![gemnasium deps][gemnasium-image]][gemnasium-url]
+[![codecov](https://codecov.io/gh/react-component/texty-anim/branch/master/graph/badge.svg)](https://codecov.io/gh/react-component/texty-anim)
 [![npm download][download-image]][download-url]
 
 [npm-image]: http://img.shields.io/npm/v/rc-texty-anim.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/rc-texty-anim
 [travis-image]: https://img.shields.io/travis/react-component/texty-anim.svg?style=flat-square
 [travis-url]: https://travis-ci.org/react-component/texty-anim
-[coveralls-image]: https://img.shields.io/coveralls/react-component/texty-anim.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/react-component/texty-anim?branch=master
-[gemnasium-image]: http://img.shields.io/gemnasium/react-component/texty-anim.svg?style=flat-square
-[gemnasium-url]: https://gemnasium.com/react-component/texty-anim
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/rc-texty-anim.svg?style=flat-square
@@ -88,7 +83,6 @@ React.render(<TextyAnim />, container);
 
 ```
 npm test
-npm run chrome-test
 ```
 
 ## Coverage

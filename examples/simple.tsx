@@ -2,23 +2,24 @@
 
 import 'rc-texty-anim/assets/index.less';
 import TextyAnim from '../src/';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import '../assets/index.less';
+import './assets/index.less';
 
 const text = '平台拥有丰富的各类首页模板';
 
-class Demo extends React.Component {
-  render() {
-    return (
-      <TextyAnim
-        reverse
-        type="bounceBack"
-      >
-        {text}
-      </TextyAnim>
-    );
-  }
+function Demo() {
+  return (
+    <TextyAnim
+      type="mask-top"
+      onEnd={(type) => {
+        console.log(type);
+      }}
+    >
+      {text}
+    </TextyAnim>
+  );
 }
 
 ReactDOM.render(<Demo />, document.getElementById('__react-content'));
