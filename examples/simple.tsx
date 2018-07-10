@@ -14,6 +14,7 @@ function Demo() {
     <TextyAnim
       type="mask-top"
       onEnd={(type) => {
+        // tslint:disable-next-line
         console.log(type);
       }}
     >

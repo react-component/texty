@@ -1,7 +1,7 @@
 // use jsx to render html, do not modify simple.html
 
 import 'rc-texty-anim/assets/index.less';
-import TextyAnim, { ITextyProps } from '../src/';
+import TextyAnim, { ITextyMode, ITextyType } from '../src/';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import '../assets/index.less';
@@ -11,14 +11,14 @@ import animType from '../src/animTypes';
 const text = '平台拥有丰富的各类首页模板';
 class Demo extends React.Component<{}, {
   show: boolean;
-  type: ITextyProps['type'];
-  mode: ITextyProps['mode'];
+  type: ITextyType;
+  mode: ITextyMode;
 }> {
   state = {
     show: false,
-    mode: 'smooth',
-    type: 'left',
-  }
+    mode: 'smooth' as ITextyMode,
+    type: 'left' as ITextyType,
+  };
 
   onClick = () => {
     this.setState({
@@ -58,7 +58,7 @@ class Demo extends React.Component<{}, {
           type={this.state.type}
           mode={this.state.mode}
           onEnd={(type) => {
-            console.log(type);
+            console.log(type);// tslint:disable-line
           }}
         >
           {this.state.show && text}

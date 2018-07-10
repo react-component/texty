@@ -5,9 +5,7 @@ import * as classnames from 'classnames';
 import animTypes from './animTypes';
 import { ITextyProps } from './TextyProps';
 
-export default class TextyAnim extends React.Component<ITextyProps,
-  {
-  }> {
+export default class TextyAnim extends React.Component<ITextyProps, {}> {
   static defaultProps = {
     type: 'mask-bottom',
     mode: 'smooth',
@@ -16,7 +14,7 @@ export default class TextyAnim extends React.Component<ITextyProps,
     delay: 0,
     interval: 50,
     appear: true,
-    onEnd: new Function,
+    onEnd: () => void {},
   };
 
   tweenGrooup: { keysToEnter: string[], keysToLeave: string[] };
@@ -85,7 +83,7 @@ export default class TextyAnim extends React.Component<ITextyProps,
             return { delay, ...item };
           }
         }
-        return { delay: !i ? delay : 0, ...item }
+        return { delay: !i ? delay : 0, ...item };
       });
     }
     return { delay, type: genreType, ...custom };
@@ -104,7 +102,7 @@ export default class TextyAnim extends React.Component<ITextyProps,
       split,
       ...props,
     } = this.props;
-    const getChildrenToRender = this.getChildrenToRender(children)
+    const getChildrenToRender = this.getChildrenToRender(children);
     const classNames = classnames(prefixCls, {
       [type]: type && !enter,
       [className]: !!className,

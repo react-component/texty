@@ -71,7 +71,7 @@ export default {
       { y: -10, duration: 200 },
       { y: 15, duration: 200 },
       { y: -30, opacity: 0, duration: 300 },
-    ]
+    ],
   },
   swing: {
     enter: [
@@ -91,7 +91,7 @@ export default {
       { x: 8, duration: 100 },
       { x: -10, duration: 150 },
       { x: 10, opacity: 0, duration: 150 },
-    ]
+    ],
   },
   'swing-rotate': {
     enter: [
@@ -111,7 +111,7 @@ export default {
       { rotate: 15, duration: 200 },
       { rotate: -30, duration: 300 },
       { rotate: 30, opacity: 0, duration: 300 },
-    ]
+    ],
   },
   'swing-y': {
     enter: [
@@ -131,6 +131,6 @@ export default {
       { y: 8, duration: 100 },
       { y: -10, duration: 150 },
       { y: 10, opacity: 0, duration: 150 },
-    ]
+    ],
   },
 };

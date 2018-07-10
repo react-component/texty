@@ -1,11 +1,16 @@
+/* tslint:disable */
+export type ITextyType = 'left' | 'right' | 'top' | 'bottom' | 'alpha' | 'scale' |
+  'scaleX' | 'scaleBig' | 'scaleY' | 'mask-bottom' | 'mask-top' |
+  'flash' | 'bounce' | 'swing' | 'swing-y' | 'swing-rotate';
+
+export type ITextyMode = 'smooth' | 'reverse' | 'random' | 'sync';
+
 export interface ITextyProps {
   children: string;
   className?: string;
   prefixCls?: string;
-  type?: 'left' | 'right' | 'top' | 'bottom' | 'alpha' | 'scale' |
-    'scaleX' | 'scaleBig' | 'scaleY' | 'mask-bottom' | 'mask-top' |
-    'flash' | 'bounce' | 'swing' | 'swing-y' | 'swing-rotate';
-  mode?: 'smooth' | 'reverse' | 'random' | 'sync';
+  type?: ITextyType;
+  mode?: ITextyMode;
   split?(str: string): string[];
   delay?: number;
   interval?: ((e: { key: string }) => number) | number;
