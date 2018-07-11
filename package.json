@@ -49,7 +49,6 @@
     "pub": "rc-tools run pub --babel-runtime",
     "lint": "rc-tools run lint",
     "karma": "rc-test run karma",
-    "saucelabs": "rc-test run saucelabs",
     "test": "jest",
     "coverage": "jest --coverage"
   },
