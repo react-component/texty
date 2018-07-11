@@ -26,7 +26,3 @@ coverage
 *.js
 *.jsx
 *.map
-!tests/index.js
-!/index*.js
-/ios/
-/android/
