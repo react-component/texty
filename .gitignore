@@ -23,6 +23,5 @@ node_modules
 build
 lib
 coverage
-*.js
 *.jsx
 *.map
