@@ -14,7 +14,6 @@ export default class TextyAnim extends React.Component<ITextyProps, {}> {
     delay: 0,
     interval: 50,
     appear: true,
-    onEnd: (e: { key: string, type: string }) => void {},
   };
 
   tweenGrooup: { keysToEnter: string[], keysToLeave: string[] };
@@ -40,7 +39,7 @@ export default class TextyAnim extends React.Component<ITextyProps, {}> {
 
   getEnterOrLeave = (e, genre, length) => {
     const { mode, type, enter, appear, interval } = this.props;
-    if (!appear && genre === 'enter') {
+    if (!appear && genre === 'enter' || length < 0) {
       return null;
     }
     let delay;

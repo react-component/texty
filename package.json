@@ -60,7 +60,7 @@
   "devDependencies": {
     "@types/enzyme": "^2.8.6",
     "@types/enzyme-to-json": "^1.5.0",
-    "@types/jest": "^23.1.4",
+    "@types/jest": "^23.1.5",
     "@types/react": "^16.0.0",
     "@types/react-dom": "^16.0.0",
     "core-js": "^2.5.1",
@@ -72,7 +72,8 @@
     "raf": "^3.4.0",
     "rc-tools": "^8.1.1",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "ts-jest": "^23.0.0"
   },
   "pre-commit": [
     "lint"
@@ -86,7 +87,7 @@
       "./tests/setup.ts"
     ],
     "collectCoverageFrom": [
-      "src/**/*"
+      "src/**/*.{ts,tsx}"
     ],
     "coverageDirectory": "./coverage/",
     "snapshotSerializers": [
@@ -98,8 +99,7 @@
       "js"
     ],
     "transform": {
-      "\\.tsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js",
-      "\\.jsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
+      "^.+\\.tsx?$": "ts-jest"
     }
   }
 }

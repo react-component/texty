@@ -56,6 +56,8 @@ describe('rc-texty', () => {
       >Text</TextyAnim>);
     console.log(instance.find('TweenOneGroup').instance().props.enter().x);
     expect(instance.find('TweenOneGroup').instance().props.enter().x).toBe(100);
+    instance.setProps({ children: null });
+    console.log(instance.find('TweenOneGroup').instance().props.leave());
   });
   it('rc-texty interval is function', () => {
     instance = mount(

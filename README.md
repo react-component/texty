@@ -18,21 +18,6 @@ React TextyAnim Component
 [download-image]: https://img.shields.io/npm/dm/rc-texty.svg?style=flat-square
 [download-url]: https://npmjs.org/package/rc-texty
 
-
-## Screenshots
-
-<img src="" width="288"/>
-
-
-## Development
-
-```
-npm install typings -g
-npm install
-typings install
-npm start
-```
-
 ## Example
 
 http://localhost:8010/examples/
