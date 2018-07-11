@@ -27,7 +27,7 @@ describe('rc-texty', () => {
         mode="sync"
       >Text</TextyAnim>);
     expect(instance.find('TweenOneGroup').children().length).toBe(1);
-    expect(instance.find('TweenOneGroup').instance().state.children.length).toBe(1)
+    expect(instance.find('TweenOneGroup').instance().state.children.length).toBe(1);
   });
 
   it('rc-texty switch children', () => {
@@ -38,13 +38,13 @@ describe('rc-texty', () => {
       >Text</TextyAnim>);
     const dom = instance.find('div').instance();
     const spanOne = dom.children[0];
-    console.log(instance.find('TweenOneGroup').instance().props.children.length)
-    console.log(spanOne.style.opacity)
+    console.log(instance.find('TweenOneGroup').instance().props.children.length);
+    console.log(spanOne.style.opacity);
     expect(parseFloat(spanOne.style.opacity)).toBe(0);
-    expect(instance.find('TweenOneGroup').instance().props.children.length).toBe(4)
+    expect(instance.find('TweenOneGroup').instance().props.children.length).toBe(4);
     instance.setProps({ children: null });
     expect(instance.find('TweenOneGroup').instance().props.children.length).toBe(0);
-    console.log(instance.find('TweenOneGroup').instance().props.children.length)
+    console.log(instance.find('TweenOneGroup').instance().props.children.length);
   });
 
   it('rc-texty enter is function', () => {

@@ -79,8 +79,12 @@
     "lint"
   ],
   "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)(spec|test).ts?(x)"
+    ],
     "setupFiles": [
-      "./tests/setup.js"
+      "./tests/setup.ts"
     ],
     "collectCoverageFrom": [
       "src/**/*"
