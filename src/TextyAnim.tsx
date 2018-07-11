@@ -1,20 +1,20 @@
 import * as React from 'react';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
-import * as classnames from 'classnames';
+import classnames from 'classnames';
 
 import animTypes from './animTypes';
 import { ITextyProps } from './TextyProps';
 
 export default class TextyAnim extends React.Component<ITextyProps, {}> {
   static defaultProps = {
-    type: 'mask-bottom',
+    type: 'top',
     mode: 'smooth',
     prefixCls: 'texty',
     component: 'div',
     delay: 0,
     interval: 50,
     appear: true,
-    onEnd: () => void {},
+    onEnd: (e: { key: string, type: string }) => void {},
   };
 
   tweenGrooup: { keysToEnter: string[], keysToLeave: string[] };

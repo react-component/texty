@@ -2,7 +2,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import TweenOne from 'rc-tween-one';
-import 'rc-texty-anim/assets/index.less';
 import TextyAnim from '../src/';
 import '../assets/index.less';
 import './assets/combined.less';

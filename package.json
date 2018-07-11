@@ -1,23 +1,25 @@
 {
-  "name": "rc-texty-anim",
+  "name": "rc-texty",
   "version": "0.1.0",
-  "description": "texty-anim ui component for react",
+  "description": "texty ui component for react",
   "keywords": [
     "react",
     "react-component",
-    "react-texty-anim",
-    "texty-anim"
+    "react-texty",
+    "texty",
+    "text-anim",
+    "rc-text-anim"
   ],
   "engines": {
     "node": ">=6.0.0"
   },
-  "homepage": "https://github.com/react-component/texty-anim",
+  "homepage": "https://github.com/react-component/texty",
   "author": "155259966@qq.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-component/texty-anim.git"
+    "url": "https://github.com/react-component/texty.git"
   },
-  "bugs": "https://github.com/react-component/texty-anim/issues",
+  "bugs": "https://github.com/react-component/texty/issues",
   "files": [
     "lib",
     "assets/*.css",
@@ -30,7 +32,7 @@
   "config": {
     "port": 8010,
     "entry": {
-      "rc-texty-anim": [
+      "rc-texty": [
         "./assets/index.less",
         "./src/index.tsx"
       ]
@@ -55,7 +57,6 @@
     "rc-tween-one": "^2.2.0"
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.4",
     "@types/enzyme": "^2.8.6",
     "@types/enzyme-to-json": "^1.5.0",
     "@types/jest": "^23.1.4",
@@ -65,7 +66,6 @@
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.4",
     "enzyme-to-json": "^3.2.1",
-    "expect.js": "0.3.x",
     "jest": "^23.1.0",
     "pre-commit": "1.x",
     "raf": "^3.4.0",
@@ -83,10 +83,17 @@
     "collectCoverageFrom": [
       "src/**/*"
     ],
+    "coverageDirectory": "./coverage/",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
+      "\\.tsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js",
       "\\.jsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
     }
   }

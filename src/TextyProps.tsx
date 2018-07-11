@@ -6,7 +6,7 @@ export type ITextyType = 'left' | 'right' | 'top' | 'bottom' | 'alpha' | 'scale'
 export type ITextyMode = 'smooth' | 'reverse' | 'random' | 'sync';
 
 export interface ITextyProps {
-  children: string;
+  children?: string;
   className?: string;
   prefixCls?: string;
   type?: ITextyType;
@@ -22,5 +22,5 @@ export interface ITextyProps {
   componentProps?: object;
   exclusive?: boolean;
   animatingClassName?: string[];
-  onEnd?(type: string): void;
+  onEnd?(e: { key: string, type: string }): void;
 }
