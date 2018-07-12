@@ -25,9 +25,6 @@ export default class TextyAnim extends React.Component<ITextyProps, {}> {
     const { split } = this.props;
     const t = split ? split(str) : str.split(''); // Array(str.length).fill(1);
     return t.map((c, i) => {
-      if (c === ' ') {
-        return c;
-      }
       return (
         <span
           key={`${c}-${i.toString()}`}
