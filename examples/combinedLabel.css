@@ -1,0 +1,64 @@
+.navbar {
+  box-shadow: none !important;
+}
+#__react-content {
+  padding: 0;
+  background: linear-gradient(135deg, #329fff 1%, #8c00ff 100%);
+  height: 300px;
+  position: relative;
+  width: 100%;
+}
+.combined {
+  color: #fff;
+  width: 316px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.combined-shape {
+  position: relative;
+}
+.combined-shape > * {
+  width: 50%;
+  height: 64px;
+  position: absolute;
+  overflow: hidden;
+}
+.combined-shape > * > * {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.combined-shape .shape-left {
+  left: 0;
+}
+.combined-shape .shape-right {
+  right: 0;
+}
+.combined .title {
+  font-size: 58px;
+  letter-spacing: 8px;
+  position: absolute;
+  width: 350px;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.combined-bar {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 70px;
+}
+.combined .content {
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  top: 78px;
+}
+
+/*# sourceMappingURL=combinedLabel.css.map*/

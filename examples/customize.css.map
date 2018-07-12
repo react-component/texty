@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./examples/assets/index.less"],"names":[],"mappings":"AACA;EACE;EACA;CAAD","file":"examples/customize.css","sourcesContent":["\n.texty {\n  font-size: 32px;\n  margin-top: 80px;\n}\n\n\n// WEBPACK FOOTER //\n// ./examples/assets/index.less"],"sourceRoot":""}

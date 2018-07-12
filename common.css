@@ -1,0 +1,12 @@
+.texty {
+  position: relative;
+}
+.texty span {
+  display: inline-block;
+}
+.texty.mask-bottom,
+.texty.mask-top {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=common.css.map*/

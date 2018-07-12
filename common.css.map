@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./assets/index.less"],"names":[],"mappings":"AAAA;EACE;CACD;AAFD;EAII;CACH;AACC;;EAEE;CACH","file":"common.css","sourcesContent":[".texty {\n  position: relative;\n  \n  span {\n    display: inline-block;\n  }\n  &.mask-bottom,\n  &.mask-top {\n    overflow: hidden;\n  }\n}\n\n\n// WEBPACK FOOTER //\n// ./assets/index.less"],"sourceRoot":""}
