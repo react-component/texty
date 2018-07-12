@@ -92,7 +92,7 @@ var Demo = function (_React$Component) {
             t.forEach(function (str, i) {
                 c.push(__WEBPACK_IMPORTED_MODULE_4_react__["createElement"]("span", { key: str + '-' + i }, str));
                 if (i < t.length - 1) {
-                    c.push(' ');
+                    c.push(__WEBPACK_IMPORTED_MODULE_4_react__["createElement"]("span", { key: ' -' + i }, " "));
                 }
             });
             return c;

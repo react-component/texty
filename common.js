@@ -26388,9 +26388,6 @@ var TextyAnim = function (_React$Component) {
 
             var t = split ? split(str) : str.split(''); // Array(str.length).fill(1);
             return t.map(function (c, i) {
-                if (c === ' ') {
-                    return c;
-                }
                 return __WEBPACK_IMPORTED_MODULE_4_react__["createElement"]("span", { key: c + '-' + i.toString() }, c);
             });
         };

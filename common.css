@@ -3,6 +3,7 @@
 }
 .texty span {
   display: inline-block;
+  white-space: pre-wrap;
 }
 .texty.mask-bottom,
 .texty.mask-top {
