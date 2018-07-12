@@ -47,7 +47,7 @@ class Demo extends React.Component {
         </span>
       ));
       if (i < t.length - 1) {
-        c.push(' ');
+        c.push(<span key={` -${i}`}> </span>);
       }
     });
     return c;
