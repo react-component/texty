@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>customize.js - example - rc-texty@0.2.0</title>
+  <title>customeTime.js - example - rc-texty@0.2.0</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -257,7 +257,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
   }
   </script>
-  <link rel="stylesheet" href="../common.css" /><link rel="stylesheet" href="customize.css" />
+  <link rel="stylesheet" href="../common.css" /><link rel="stylesheet" href="customeTime.css" />
 </head>
 
 <body>
@@ -278,89 +278,30 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 
 <span class="hljs-keyword">const</span> text = <span class="hljs-string">'平台拥有丰富的各类首页模板'</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  getEnter = (e) =&gt; {
-    <span class="hljs-keyword">switch</span> (e.index) {
-      <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-        <span class="hljs-keyword">return</span> {
-          rotate: <span class="hljs-number">90</span>,
-          opacity: <span class="hljs-number">0</span>,
-          y: -<span class="hljs-number">60</span>,
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
-      <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-        <span class="hljs-keyword">return</span> {
-          y: -<span class="hljs-number">60</span>,
-          x: -<span class="hljs-number">10</span>,
-          opacity: <span class="hljs-number">0</span>,
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:
-      <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-        <span class="hljs-keyword">return</span> {
-          y: -<span class="hljs-number">60</span>,
-          x: <span class="hljs-number">20</span>,
-          opacity: <span class="hljs-number">0</span>,
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
-        <span class="hljs-keyword">return</span> {
-          y: <span class="hljs-number">60</span>,
-          opacity: <span class="hljs-number">0</span>,
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:
-      <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
-        <span class="hljs-keyword">return</span> {
-          x: <span class="hljs-number">30</span>,
-          opacity: <span class="hljs-number">0</span>,
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
-        <span class="hljs-keyword">return</span> {
-          enter: [
-            {
-              scale: <span class="hljs-number">2</span>,
-              opacity: <span class="hljs-number">0</span>,
-              type: <span class="hljs-string">'set'</span>,
-            },
-            { scale: <span class="hljs-number">1.2</span>, opacity: <span class="hljs-number">1</span>, duration: <span class="hljs-number">300</span> },
-            { scale: <span class="hljs-number">0.9</span>, duration: <span class="hljs-number">200</span> },
-            { scale: <span class="hljs-number">1.05</span>, duration: <span class="hljs-number">150</span> },
-            { scale: <span class="hljs-number">1</span>, duration: <span class="hljs-number">100</span> },
-          ],
-          leave: {
-            opacity: <span class="hljs-number">0</span>, scale: <span class="hljs-number">0</span>,
-          },
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">11</span>:
-      <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
-        <span class="hljs-keyword">return</span> {
-          scale: <span class="hljs-number">0.8</span>,
-          x: <span class="hljs-number">30</span>,
-          y: -<span class="hljs-number">10</span>,
-          opacity: <span class="hljs-number">0</span>,
-        };
-      <span class="hljs-keyword">case</span> <span class="hljs-number">12</span>:
-      <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:
-        <span class="hljs-keyword">return</span> {
-          scale: <span class="hljs-number">0.8</span>,
-          x: <span class="hljs-number">30</span>,
-          y: <span class="hljs-number">10</span>,
-          opacity: <span class="hljs-number">0</span>,
-        };
-      <span class="hljs-keyword">default</span>:
-        <span class="hljs-keyword">return</span> {
-          opacity: <span class="hljs-number">0</span>,
-        };
-    }
-  }
-  render() {
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TextyAnim</span>
-        <span class="hljs-attribute">enter</span>=<span class="hljs-value">{this.getEnter}</span>
-        <span class="hljs-attribute">leave</span>=<span class="hljs-value">{this.getEnter}</span>
-      &gt;</span>
-        {text}
-      <span class="hljs-tag">&lt;/<span class="hljs-title">TextyAnim</span>&gt;</span>
-    )</span>;
-  }
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Demo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">TextyAnim</span>
+      <span class="hljs-attribute">type</span>=<span class="hljs-value">"mask-top"</span>
+      <span class="hljs-attribute">duration</span>=<span class="hljs-value">{(e)</span> =&gt;</span> {
+        if (e.index === 2) {
+          return 500;
+        }
+        return 1000;
+      }}
+      interval={(e) =&gt; {
+        if (e.index === 2) {
+          return 500;
+        }
+        return e.index * 50;
+      }}
+      onEnd={(type) =&gt; {
+        // tslint:disable-next-line
+        console.log(type);
+      }}
+    &gt;
+      {text}
+    <span class="hljs-tag">&lt;/<span class="hljs-title">TextyAnim</span>&gt;</span>
+  )</span>;
 }
 
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Demo</span> /&gt;</span>, document.getElementById('__react-content'));
@@ -374,7 +315,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
   </a>
   <script>FastClick.attach(document.body);</script>
   <script src="../common.js?nowrap"></script>
-  <script src="customize.js?nowrap"></script>
+  <script src="customeTime.js?nowrap"></script>
 </body>
 
 </html>

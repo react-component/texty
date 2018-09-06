@@ -1,14 +1,14 @@
-webpackJsonp([1],{
+webpackJsonp([3],{
 
-/***/ 139:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(140);
+module.exports = __webpack_require__(136);
 
 
 /***/ }),
 
-/***/ 140:
+/***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30,10 +30,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var text = '平台拥有丰富的各类首页模板';
 function Demo() {
-        return __WEBPACK_IMPORTED_MODULE_1_react__["createElement"](__WEBPACK_IMPORTED_MODULE_0__src___["a" /* default */], { type: "mask-top", onEnd: function onEnd(type) {
-                        // tslint:disable-next-line
-                        console.log(type);
-                } }, text);
+    return __WEBPACK_IMPORTED_MODULE_1_react__["createElement"](__WEBPACK_IMPORTED_MODULE_0__src___["a" /* default */], { type: "mask-top", duration: function duration(e) {
+            if (e.index === 2) {
+                return 500;
+            }
+            return 1000;
+        }, interval: function interval(e) {
+            if (e.index === 2) {
+                return 500;
+            }
+            return e.index * 50;
+        }, onEnd: function onEnd(type) {
+            // tslint:disable-next-line
+            console.log(type);
+        } }, text);
 }
 __WEBPACK_IMPORTED_MODULE_2_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_1_react__["createElement"](Demo, null), document.getElementById('__react-content'));
 
@@ -46,5 +56,5 @@ __WEBPACK_IMPORTED_MODULE_2_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_1_re
 
 /***/ })
 
-},[139]);
-//# sourceMappingURL=simple.js.map
+},[135]);
+//# sourceMappingURL=customeTime.js.map
