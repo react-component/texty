@@ -50,8 +50,9 @@ React.render(<TextyAnim>text</TextyAnim>, container);
 | prefixCls | string         |  `texty`  |  prefix class  |
 | type      | string         |  `top`    |  animation style, 'left' \| 'right' \| 'top' \| 'bottom' \|'alpha' \| 'scale' \|  'scaleX' \| 'scaleBig' \| 'scaleY' \| 'mask-bottom' \| 'mask-top' \|  'flash' \| 'bounce' \| 'swing' \| 'swing-y' \| 'swing-rotate'. |
 | mode      | string         |  `smooth` |  animate sport mode. 'smooth' \| 'reverse' \| 'random' \| 'sync' |
-| delay     | number         | `0`       |  animation overall delay.      |
+| duration  | number \| func | `450`     |  Except for special animation 'flash' \| 'bounce' \| 'swing' \| 'swing-y' \| 'swing-rotate'. one text animation duration |
 | interval  | number \| func | `50`      |  animation interval, is function: (e: { key: string }) => number. Key is split text plus sequence(text-1). |
+| delay     | number | `0`       |  animation overall delay.      |
 | split     | func           | `null`    |  children split, return string |
 
 ### Inherit TweenOneGroup 

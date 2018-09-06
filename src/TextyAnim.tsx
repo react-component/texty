@@ -5,6 +5,16 @@ import classnames from 'classnames';
 import animTypes from './animTypes';
 import { ITextyProps } from './TextyProps';
 
+function transformArguments(arg, e) {
+  let result;
+  if (typeof arg === 'function') {
+    result = arg(e);
+  } else {
+    result = arg;
+  }
+  return result;
+}
+
 export default class TextyAnim extends React.Component<ITextyProps, {}> {
   static defaultProps = {
     type: 'top',
@@ -35,30 +45,33 @@ export default class TextyAnim extends React.Component<ITextyProps, {}> {
   }
 
   getEnterOrLeave = (e, genre, length) => {
-    const { mode, type, enter, appear, interval } = this.props;
+    const { mode, type, enter, appear, interval, duration } = this.props;
     if (!appear && genre === 'enter' || length < 0) {
       return null;
     }
+    const cb = { ...e, type: genre };
+    const $duration = transformArguments(duration, cb);
+    const $interval = transformArguments(interval, cb);
     let delay;
     if (typeof interval === 'function') {
       // function 下 mode 无效；
-      delay = interval({ ...e, genre });
+      delay = $interval;
     } else {
       switch (mode) {
         case 'reverse':
-          delay = (length - e.index) * interval;
+          delay = (length - e.index) * $interval;
           break;
         case 'sync':
           delay = 0;
           break;
         case 'random':
-          delay = length * interval * Math.random();
+          delay = length * $interval * Math.random();
           break;
         default:
-          delay = e.index * interval;
+          delay = e.index * $interval;
       }
     }
-    delay += this.props.delay;
+    delay += transformArguments(this.props.delay, cb);
     const genreType = genre === 'enter' ? 'from' : 'to';
     let custom = this.props[genre] || enter;
     if (custom && typeof custom === 'function') {
@@ -82,7 +95,7 @@ export default class TextyAnim extends React.Component<ITextyProps, {}> {
         return { delay: !i ? delay : 0, ...item };
       });
     }
-    return { delay, type: genreType, ...custom };
+    return { delay, duration: $duration, type: genreType, ...custom };
   }
 
   render() {
@@ -92,11 +105,12 @@ export default class TextyAnim extends React.Component<ITextyProps, {}> {
       className,
       enter,
       mode,
+      duration,
       delay,
       interval,
       children,
       split,
-      ...props,
+      ...props
     } = this.props;
     const getChildrenToRender = this.getChildrenToRender(children);
     const classNames = classnames(prefixCls, {

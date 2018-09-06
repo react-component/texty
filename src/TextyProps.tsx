@@ -12,8 +12,9 @@ export interface ITextyProps {
   type?: ITextyType;
   mode?: ITextyMode;
   split?(str: string): string[];
-  delay?: number;
-  interval?: ((e: { key: string }) => number) | number;
+  delay?: number | ((e: { key: string, type: string, index: number }) => number);
+  duration?: number | ((e: { key: string, type: string, index: number }) => number);
+  interval?: ((e: { key: string, type: string, index: number }) => number) | number;
   // TweenOneGroup API
   appear?: boolean;
   enter?: any;
