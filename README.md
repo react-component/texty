@@ -37,6 +37,8 @@ online example: http://react-component.github.io/texty/
 ```js
 var TextyAnim = require('rc-texty');
 var React = require('react');
+require('rc-texty/assets/index.css');
+
 React.render(<TextyAnim>text</TextyAnim>, container);
 ```
 
