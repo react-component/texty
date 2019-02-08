@@ -58,7 +58,7 @@
     "rc-tween-one": "^2.2.0"
   },
   "devDependencies": {
-    "@types/enzyme": "^2.8.6",
+    "@types/enzyme": "^3.1.17",
     "@types/enzyme-to-json": "^1.5.0",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.0.0",
