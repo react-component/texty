@@ -73,7 +73,7 @@
     "rc-tools": "^8.1.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "ts-jest": "^23.0.0"
+    "ts-jest": "^26.5.3"
   },
   "pre-commit": [
     "lint"
